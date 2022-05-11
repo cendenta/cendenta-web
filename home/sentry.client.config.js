@@ -8,10 +8,7 @@ const SENTRY_DSN = process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN;
 
 Sentry.init({
   dsn: SENTRY_DSN || 'https://855e8e250aa947bc80484767dde24cd0@o424032.ingest.sentry.io/6396679',
-  // Adjust this value in production, or use tracesSampler for greater control
+  environment: process.env.VERCEL_ENV || 'development',
+  release: `${process.env.NEXT_PUBLIC_APP_NAME}@${process.env.NEXT_PUBLIC_APP_VERSION}`,  
   tracesSampleRate: 1.0,
-  // ...
-  // Note: if you want to override the automatic release value, do not set a
-  // `release` value here - use the environment variable `SENTRY_RELEASE`, so
-  // that it will also get attached to your source maps
 });

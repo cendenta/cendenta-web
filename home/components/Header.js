@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const navigation = [
   { name: 'About', href: '/about' },
-  { name: 'Blog', href: '/blog' },
+  // { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
 ]
 
@@ -36,11 +36,9 @@ export default function Header() {
             </div>
           </div>
           <div className="ml-10 space-x-4">
-            <Link href="#">
-              <a className="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">
-                Client Login
-              </a>
-            </Link>
+            <a href={process.env.CLIENT_URL} className="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">
+              Client Login
+            </a>
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">

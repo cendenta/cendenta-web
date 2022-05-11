@@ -2,6 +2,7 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import '../styles/globals.css';
+import '../utils/icons/font-awesome';
 
 function MyApp({ Component, pageProps }) {
     const showHeaderFooter = Component?.name !== 'NotFound';

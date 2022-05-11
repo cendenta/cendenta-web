@@ -1,6 +1,6 @@
 const Contact = () => (
   <div>
-    <p>This is the contact page.</p>
+    {/* <p>This is the contact page.</p> */}
   </div>
 )
 

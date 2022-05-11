@@ -10,11 +10,13 @@ export default function NotFound() {
               <Link href="/">
                 <a className="inline-flex">
                   <span className="sr-only">Cendenta</span>
-                  <Image
-                    className="h-12 w-auto"
-                    src="/static/cendenta.svg"
-                    alt=""
-                  />
+                  <div className="h-12 w-12 relative">
+                    <Image
+                      src="/static/cendenta.svg"
+                      alt=""
+                      layout="fill"
+                    />
+                  </div>
                 </a>
               </Link>
             </div>
