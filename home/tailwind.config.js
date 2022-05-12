@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     "./pages/*.{js,ts,jsx,tsx}",
@@ -13,6 +15,9 @@ module.exports = {
       'dark-blue-gray': '#58688A'
     },
     extend: {
+      fontFamily: {
+        sans: ['Red Hat Text', ...defaultTheme.fontFamily.sans],
+      },
     }
   },
   plugins: [],

@@ -14,15 +14,16 @@ export default function Header() {
         <div className="w-full py-6 flex items-center justify-between border-b border-med-gray-500 lg:border-none">
           <div className="flex items-center">
             <Link href="/">
-              <a>
-                <span className="sr-only">Cendenta</span>
+              <a className="flex items-center space-x-3">
                 <div className="h-12 w-12 relative">
                   <Image
                     src="/static/cendenta.png"
-                    alt=""
+                    alt="Cendenta"
                     layout="fill"
                   />
                 </div>
+
+                <span className="text-2xl font-semibold text-dark-blue-gray hover:text-dark-orange">Cendenta</span>
               </a>
             </Link>
             <div className="hidden ml-10 space-x-8 lg:block">
