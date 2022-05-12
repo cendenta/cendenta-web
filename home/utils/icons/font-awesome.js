@@ -4,13 +4,19 @@ import {
 } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { 
+  faGithub,
   faKeybase, 
-  faStackOverflow
+  faLinkedin,
+  faStackOverflow,
+  faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
   
   config.autoAddCss = false; 
 
 library.add(
+  faGithub,
   faKeybase, 
-  faStackOverflow
+  faLinkedin,
+  faStackOverflow,
+  faTwitter
 );

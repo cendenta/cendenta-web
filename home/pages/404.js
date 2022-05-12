@@ -28,7 +28,7 @@ export default function NotFound() {
                 <div className="mt-6">
                     <Link href="/">
                         <a className="text-base font-medium text-indigo-600 hover:text-indigo-500">
-                            Go back home<span aria-hidden="true"> &rarr;</span>
+                          <span aria-hidden="true">&larr;&nbsp;</span>Go back home
                         </a>
                     </Link>
                 </div>

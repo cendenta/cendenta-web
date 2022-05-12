@@ -9,9 +9,9 @@ const navigation = [
 
 export default function Header() {
   return (
-    <header className="bg-indigo-600">
+    <header className="bg-light-gray">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div className="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
+        <div className="w-full py-6 flex items-center justify-between border-b border-med-gray-500 lg:border-none">
           <div className="flex items-center">
             <Link href="/">
               <a>
@@ -27,8 +27,8 @@ export default function Header() {
             </Link>
             <div className="hidden ml-10 space-x-8 lg:block">
               {navigation.map((link) => (
-                <Link key={link.name} href={link.href}>
-                  <a className="text-base font-medium text-white hover:text-indigo-50">
+                <Link href={link.href} key={link.name}>
+                  <a className="text-base font-medium text-dark-blue-gray hover:text-dark-orange">
                     {link.name}
                   </a>
                 </Link>
@@ -36,15 +36,17 @@ export default function Header() {
             </div>
           </div>
           <div className="ml-10 space-x-4">
-            <a href={process.env.CLIENT_URL} className="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">
-              Client Login
-            </a>
+            <Link href={process.env.NEXT_PUBLIC_CLIENT_URL}> 
+              <a className="inline-block bg-med-blue-gray py-2 px-4 border border-transparent rounded-md text-base font-medium text-light-gray hover:bg-opacity-75 hover:bg-dark-orange">
+                Client Login
+              </a>
+            </Link>
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
           {navigation.map((link) => (
-            <Link key={link.name} href={link.href}>
-              <a className="text-base font-medium text-white hover:text-indigo-50">
+            <Link href={link.href} key={link.name}>
+              <a className="text-base font-medium text-white hover:text-dark-blue-gray">
                 {link.name}
               </a>
             </Link>

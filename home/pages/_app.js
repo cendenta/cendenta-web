@@ -6,7 +6,6 @@ import '../utils/icons/font-awesome';
 
 function MyApp({ Component, pageProps }) {
     const showHeaderFooter = Component?.name !== 'NotFound';
-
     return (
         <>
             {showHeaderFooter && <Header />}
