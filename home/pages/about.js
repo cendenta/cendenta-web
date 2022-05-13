@@ -7,7 +7,7 @@ const About = () => (
       description="Cendenta is a custom software development company."
     />
     <div>
-      <p>This is the about page.</p>
+      {/* <p>This is the about page.</p> */}
     </div>
   </>
 )
