@@ -1,21 +1,10 @@
-// import App from 'next/app'
-import { DefaultSeo } from 'next-seo';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import SEO from '../next-seo.config';
 import '../styles/globals.css';
 import '../utils/icons/font-awesome';
+import Layout from '../components/_layout'
 
 function MyApp({ Component, pageProps }) {
-    const showHeaderFooter = Component?.name !== 'NotFound';
-    return (
-        <>
-            <DefaultSeo {...SEO} />
-            {showHeaderFooter && <Header />}
-            <Component {...pageProps} />
-            {showHeaderFooter && <Footer />}
-        </>
-    )
+    const getLayout = Component.getLayout || ((page) => (<Layout>{page}</Layout>))
+    return getLayout(<Component {...pageProps} />)
 }
 
 export default MyApp;  

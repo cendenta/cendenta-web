@@ -4,11 +4,11 @@ import { NextSeo } from 'next-seo';
   return (
     <>
       <NextSeo
-        title="Home"
+        title="Cendenta"
         description="Home page of Cendenta LLC"
       />
       <div>
-        {/* <p>This is the home page.</p> */}
+        <p>This is the home page.</p>
       </div>
     </> 
   )
