@@ -16,29 +16,28 @@ const handler = async (req, res) => {
         !validator.isEmpty(message);
 
     if(isValid){
-        console.log('REQ BODY', req.body);
-        const sesParams = {
-            Destination: {
-              ToAddresses: ["contact@cendenta.com"],
+      const sesParams = {
+        Destination: {
+          ToAddresses: ["contact@cendenta.com"],
+        },
+        Message: {
+          Body: {
+            Text: {
+              Charset: 'UTF-8',
+              Data: `Name: ${fullName}\r\nEmail: ${email}\r\nPhone: ${phone}\r\n\r\n-----\r\n\r\n${message}`
             },
-            Message: {
-              Body: {
-                Text: {
-                  Charset: 'UTF-8',
-                  Data: `Name: ${fullName}\r\nEmail: ${email}\r\nPhone: ${phone}\r\n\r\n-----\r\n\r\n${message}`
-                },
-              },
-              Subject: {
-                Charset: 'UTF-8',
-                Data: `Contact Form Submission: ${fullName}`
-              },
-            },
-            ReplyToAddresses: [email],
-            Source: `${fullName} <no-reply@cendenta.com>`,
-          };
-        
-          var response = await SES.sendEmail(sesParams).promise();
-          res.status(200).json({ response });
+          },
+          Subject: {
+            Charset: 'UTF-8',
+            Data: `Contact Form Submission: ${fullName}`
+          },
+        },
+        ReplyToAddresses: [email],
+        Source: `${fullName} <no-reply@cendenta.com>`,
+      };
+    
+      var response = await SES.sendEmail(sesParams).promise();
+      res.status(200).json({ response: response });
     } else {
         res.status(400).json({ error: "validation failed" });
     }

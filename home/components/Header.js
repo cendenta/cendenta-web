@@ -22,7 +22,6 @@ export default function Header() {
                     layout="fill"
                   />
                 </div>
-
                 <span className="text-2xl font-semibold text-dark-blue-gray hover:text-dark-orange">Cendenta</span>
               </a>
             </Link>

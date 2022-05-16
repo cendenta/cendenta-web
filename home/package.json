@@ -15,11 +15,14 @@
     "@heroicons/react": "^1.0.6",
     "@sentry/nextjs": "^6.19.7",
     "aws-sdk": "^2.1134.0",
+    "formik": "^2.2.9",
     "next": "^12.1.6",
     "next-seo": "^5.4.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "validator": "^13.7.0"
+    "react-hot-toast": "^2.2.0",
+    "validator": "^13.7.0",
+    "yup": "^0.32.11"
   },
   "license": "MIT",
   "devDependencies": {

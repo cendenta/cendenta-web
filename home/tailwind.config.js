@@ -1,4 +1,5 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: [
@@ -7,6 +8,10 @@ module.exports = {
   ],
   theme: {
     colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      red: colors.red,
+      white: colors.white,
       'dark-orange': '#D88839',
       'light-orange': '#E4AD78',
       'light-gray': '#DBE0EA', //F9FCFD
