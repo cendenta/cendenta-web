@@ -43,7 +43,7 @@ const navigation = {
   
   export default function Footer() {
     return (
-      <footer className="bg-white" aria-labelledby="footer-heading">
+      <footer aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
@@ -82,11 +82,11 @@ const navigation = {
               </div>
             </div>
           </div> */}
-          <div className="mt-8 border-t border-dark-blue-gray pt-8 md:flex md:items-center md:justify-between">
+          <div className="mt-6 md:flex md:items-center md:justify-between">
             <div className="flex space-x-6 md:order-2">
               {navigation.social.map((item) => (<StandardIconLink key={item.name} item={item} />))}
             </div>
-            <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+            <p className="mt-6 text-base text-dark-blue-gray dark:text-white md:mt-0 md:order-1">
               &copy; 2022 Cendenta LLC. All rights reserved.
             </p>
           </div>

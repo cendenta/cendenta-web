@@ -54,7 +54,7 @@ export default function ContactForm() {
                 }}
                 >
                 {props => (
-                    <Form className="grid grid-cols-1 gap-y-6">
+                    <Form className="grid grid-cols-1 gap-y-6 ">
                         <div>
                             <Field name="fullName">
                                 {({ field, form }) => (
@@ -68,7 +68,7 @@ export default function ContactForm() {
                                         </label>
                                         <input
                                             {...field}
-                                            className="w-full p-4 font-semibold placeholder-dark-blue-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
+                                            className="w-full p-4 dark:bg-light-gray dark:text-black font-semibold placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
                                             placeholder="Full Name"
                                             type="text"
                                             name="fullName"
@@ -101,7 +101,7 @@ export default function ContactForm() {
                                         </label>
                                         <input
                                             {...field}
-                                            className="w-full p-4 font-semibold placeholder-dark-blue-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
+                                            className="w-full p-4 dark:bg-light-gray dark:text-black font-semibold placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
                                             placeholder="Email"
                                             type="text"
                                             name="email"
@@ -130,7 +130,7 @@ export default function ContactForm() {
                                         </label>
                                         <input
                                             {...field}
-                                            className="w-full p-4 font-semibold placeholder-dark-blue-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
+                                            className="w-full p-4 dark:bg-light-gray dark:text-black font-semibold placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
                                             placeholder="Phone"
                                             type="text"
                                             name="phone"
@@ -163,7 +163,7 @@ export default function ContactForm() {
                                         </label>
                                         <textarea
                                             {...field}
-                                            className="w-full p-4 font-semibold placeholder-dark-blue-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
+                                            className="w-full p-4 dark:bg-light-gray dark:text-black font-semibold placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
                                             placeholder="Message"
                                             type="message"
                                             name="message"
@@ -187,7 +187,7 @@ export default function ContactForm() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting || Object.keys(props.errors).length > 0}
-                                className="disabled:opacity-50 inline-block bg-med-blue-gray py-2 px-4 border border-transparent rounded-md text-base font-bold text-light-gray hover:bg-dark-orange hover:text-white"
+                                className="disabled:opacity-50 inline-block bg-med-blue-gray py-2 px-4 border border-transparent rounded-md font-bold text-white hover:bg-opacity-75 hover:bg-dark-orange dark:bg-med-gray dark:text-white dark:hover:bg-dark-orange"
                             >
                                 {`Submit${isSubmitting ? 'ting' : ''}`}
                             </button>
@@ -197,9 +197,9 @@ export default function ContactForm() {
                 )}
             </Formik>
             {messageId && 
-                <div className="mt-3">
-                    <p className="text-med-blue-gray">Message Sent! We&apos;ll be in touch soon.</p>
-                    <p className="text-med-blue-gray text-xs">{messageId}</p>
+                <div className="mt-3 text-dark-orange">
+                    <p className="font-extrabold">Message sent! We&apos;ll be in touch soon.</p>
+                    <p className="text-xs">{messageId}</p>
                 </div>
             }
         </>        

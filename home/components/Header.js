@@ -1,5 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ButtonLink from "./ButtonLink";
+import StandardLink from "./StandardLink";
+import ThemeSwitch from './ThemeSwitch';
 
 const navigation = [
   { name: 'About', href: '/about' },
@@ -8,8 +11,9 @@ const navigation = [
 ]
 
 export default function Header() {
+
   return (
-    <header className="bg-light-gray">
+    <header className="bg-light-gray dark:bg-med-blue-gray">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="w-full py-6 flex items-center justify-between border-b border-med-gray-500 lg:border-none">
           <div className="flex items-center">
@@ -22,34 +26,28 @@ export default function Header() {
                     layout="fill"
                   />
                 </div>
-                <span className="text-2xl font-semibold text-dark-blue-gray hover:text-dark-orange">Cendenta</span>
+                <span className="text-2xl font-semibold text-dark-blue-gray dark:text-white hover:text-dark-orange">Cendenta</span>
               </a>
             </Link>
             <div className="hidden ml-10 space-x-8 lg:block">
               {navigation.map((link) => (
-                <Link href={link.href} key={link.name}>
-                  <a className="text-base font-medium text-dark-blue-gray hover:text-dark-orange">
-                    {link.name}
-                  </a>
-                </Link>
+                <StandardLink key={link.name} href={link.href} title={link.name} />
               ))}
             </div>
           </div>
           <div className="ml-10 space-x-4">
-            <Link href={process.env.NEXT_PUBLIC_CLIENT_URL}> 
-              <a className="inline-block bg-med-blue-gray py-2 px-4 border border-transparent rounded-md text-base font-medium text-light-gray hover:bg-opacity-75 hover:bg-dark-orange">
-                Client Login
-              </a>
-            </Link>
+            <div className="flex items-center space-x-2">
+              <ThemeSwitch />
+              <ButtonLink 
+                href={process.env.NEXT_PUBLIC_CLIENT_URL}
+                title="Client Login"
+              />
+            </div>
           </div>
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
           {navigation.map((link) => (
-            <Link href={link.href} key={link.name}>
-              <a className="text-base font-medium text-white hover:text-dark-blue-gray">
-                {link.name}
-              </a>
-            </Link>
+            <StandardLink key={link.name} href={link.href} title={link.name} />
           ))}
         </div>
       </nav>
