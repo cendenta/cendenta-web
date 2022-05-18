@@ -1,7 +1,6 @@
 import { faGithub, faKeybase, faLinkedin, faStackOverflow, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import StandardIconLink from "./StandardIconLink";
-import StandardLink from "./StandardLink";
 
 const navigation = {
     company: [

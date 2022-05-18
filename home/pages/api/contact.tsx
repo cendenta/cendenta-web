@@ -1,3 +1,4 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 const AWS = require('aws-sdk');
 const SES = new AWS.SES({ 
     accessKeyId: process.env.SES_ACCESS_KEY,
@@ -6,7 +7,7 @@ const SES = new AWS.SES({
 });
 var validator = require('validator');
     
-const handler = async (req, res) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { email, fullName, message, phone } = req.body;
 
     const isValid = 
