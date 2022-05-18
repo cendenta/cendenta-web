@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { ReactNode } from 'react';
 
 export default function NotFound() {
     return (
@@ -40,4 +41,4 @@ export default function NotFound() {
     )
   }
   
-  NotFound.getLayout = (page) => page;
+  NotFound.getLayout = (page: ReactNode) => page;

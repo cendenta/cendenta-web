@@ -1,7 +1,7 @@
-import { Formik, Field, Form, ErrorMessage } from 'formik';
-import * as yup from 'yup';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useState } from "react";
 import toast, { Toaster } from 'react-hot-toast';
+import ContactFormSchema from '../schemas/ContactFormSchema';
 
 export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -17,22 +17,10 @@ export default function ContactForm() {
                     phone: '',
                 }}
                 validateOnMount={true}
-                validationSchema={yup.object().shape({
-                    email: yup.string()
-                        .email('Email address must be valid')
-                        .required('Email address is required'),    
-                    fullName: yup.string().required('Full name is required'),    
-                    message: yup.string().required('Message is required'),
-                    phone: yup.string()
-                        .matches(// eslint-disable-next-line
-                            /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/,
-                            'Phone number must be valid',
-                        )
-                })}
+                validationSchema={ContactFormSchema}
                 onSubmit={async (values, actions) => {
                     setIsSubmitting(true);
                     setMessageId('');
-                    console.log('onsubmit', values, actions);
                     fetch('/api/contact', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
