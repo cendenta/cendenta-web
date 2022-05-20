@@ -4,3 +4,7 @@ settings.json
 
 # Sentry
 .sentryclirc
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
