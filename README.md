@@ -9,11 +9,11 @@ Styling is done with [Tailwind CSS](https://tailwindcss.com).
 ## Sites
 
 - **/app**
-  - **Description**: Portal for clients to view project details and invoice history.
   - **Domain**: [app.cendenta.com](https://app.cendenta.com)
+  - **Description**: Portal for clients to view project details and invoice history.
 - **/blog**
-  - **Description**: Occasional blog posts, written in Markdown.
   - **Domain**: [www.cendenta.com/blog](https://www.cendenta.com/blog)
-- **/home**
-  - **Description**: Main company landing site.
+  - **Description**: Occasional blog posts, written in Markdown.
+- [![home](https://github.com/cendenta/cendenta-web/actions/workflows/home.yml/badge.svg?event=push)](https://github.com/cendenta/cendenta-web/actions/workflows/home.yml)
   - **Domain**: [www.cendenta.com](https://www.cendenta.com)
+  - **Description**: Main company landing site.
