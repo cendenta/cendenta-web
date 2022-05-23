@@ -1,23 +1,43 @@
-name: cypress-home
+name: home
 
-on: [push]
+on: 
+  push:
+    paths:
+      - 'home/**'
+      - .github/workflows/home.yml
 
 jobs:
-  cypress-run:
+  e2e:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: cypress-home
+
+      - name: Run Cypress tests
         uses: cypress-io/github-action@v2
         with:
-          working-directory: ./home
+          working-directory: home
           build: npm run build
           start: npm start
-          record: true
+          record: false
+          wait-on: 'http://localhost:3000'
         env: 
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install NPM dependencies
+        uses: bahmutov/npm-install@v1
+        with:
+          working-directory: home
+        env:
+          CYPRESS_INSTALL_BINARY: 0
+
+      - name: Run Jest tests
+        run: npm run test
+        working-directory: home
