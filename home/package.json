@@ -1,7 +1,11 @@
 {
   "name": "cendenta-home",
-  "version": "0.1.0",
   "private": true,
+  "version": "1.0.0",
+  "description": "The home page of Cendenta LLC",
+  "homepage": "https://github.com/cendenta/cendenta-web/tree/main/home",
+  "repository": "github:cendenta/cendenta-web",
+  "author": "Matthew Harward <matthew@cendenta.com> (https://www.cendenta.com)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

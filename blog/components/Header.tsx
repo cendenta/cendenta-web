@@ -5,9 +5,9 @@ import StandardLink from "./StandardLink";
 import ThemeSwitch from './ThemeSwitch';
 
 const navigation = [
-  { name: 'About', href: '/about' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' }
+  { name: 'About', href: `${process.env.HOME_URL}/about` },
+  { name: 'Blog', href: '/' },
+  { name: 'Contact', href: `${process.env.HOME_URL}/contact` }
 ]
 
 export default function Header() {
@@ -17,11 +17,11 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="w-full py-6 flex items-center justify-between border-b border-med-gray-500 lg:border-none">
           <div className="flex items-center">
-            <Link href="/">
+            <Link href={`${process.env.HOME_URL}`}>
               <a className="flex items-center space-x-3">
                 <div className="h-12 w-12 relative">
                   <Image
-                    src="/static/cendenta.png"
+                    src="/blog/static/cendenta.png"
                     alt="Cendenta"
                     layout="fill"
                   />
@@ -31,7 +31,9 @@ export default function Header() {
             </Link>
             <div className="hidden ml-10 space-x-8 lg:block">
               {navigation.map((link) => (
-                <StandardLink key={link.name} href={link.href} title={link.name} />
+                <StandardLink key={link.name} href={link.href} newTab={false}>
+                  {link.name}
+                </StandardLink>
               ))}
             </div>
           </div>
@@ -47,7 +49,9 @@ export default function Header() {
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
           {navigation.map((link) => (
-            <StandardLink key={link.name} href={link.href} title={link.name} />
+            <StandardLink key={link.name} href={link.href} newTab={false}>
+              {link.name}
+            </StandardLink>
           ))}
         </div>
       </nav>
