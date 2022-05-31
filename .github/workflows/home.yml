@@ -5,6 +5,8 @@ on:
     paths:
       - 'home/**'
       - .github/workflows/home.yml
+    branches:
+      - main
 
 jobs:
   e2e:

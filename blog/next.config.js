@@ -3,6 +3,7 @@ const { withSentryConfig } = require('@sentry/nextjs');
 const moduleExports = {
   basePath: '/blog',
   images: {
+    domains: ["source.unsplash.com", "cdn.pixabay.com", "images.pexel.com"],
     path: `/blog/_next/image`
   },
   reactStrictMode: true,

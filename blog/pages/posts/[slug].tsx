@@ -1,14 +1,11 @@
-import { GetStaticProps, GetStaticPaths } from 'next';
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
-import { serialize } from 'next-mdx-remote/serialize';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
-
-import BlogLayout from '../../_layouts/blog';
+import { serialize } from 'next-mdx-remote/serialize';
+import { NextSeo } from 'next-seo';
 import Thumbnail from '../../components/Thumbnail';
 import { IPost } from '../../types/post';
-import { SITE_URL } from '../../utils/constants';
-import { getPost, getAllPosts } from '../../utils/mdxUtils';
+import { SITE_DESCRIPTION, SITE_NAME } from '../../utils/constants';
+import { getAllPosts, getPost } from '../../utils/mdxUtils';
 
 type Props = {
   source: MDXRemoteSerializeResult;
@@ -19,25 +16,15 @@ const components = {
 };
 
 const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
-  const ogImage = SITE_URL + frontMatter.thumbnail;
+  //const ogImage = SITE_URL + frontMatter.thumbnail;
 
   return (
-    <>
-      <Head>
-        <meta
-          name="description"
-          content={frontMatter.description}
-          key="description"
-        />
-        <meta
-          property="og:description"
-          content={frontMatter.description}
-          key="ogDescription"
-        />
-        <meta property="og:image" content={ogImage} key="ogImage" />
-      </Head>
-
-      <article className="self-center prose dark:prose-light">
+    <div className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900 items-start w-full max-w-2xl mx-auto mb-16">
+      <NextSeo
+        title={`${frontMatter.title} – ${SITE_NAME}`}
+        description={SITE_DESCRIPTION}
+      />
+      <article className="w-full mt-4 prose dark:prose-light max-w-none">
         <div className="mb-4">
           <Thumbnail title={frontMatter.title} src={frontMatter.thumbnail} />
         </div>
@@ -48,7 +35,7 @@ const PostPage: React.FC<Props> = ({ source, frontMatter }: Props) => {
 
         <MDXRemote {...source} components={components} />
       </article>
-    </>
+    </div>
   );
 };
 

@@ -17,7 +17,7 @@ const BlogLayout: React.FC<Props> = ({ children, pageTitle }: Props) => {
           {children}
         </div>
       </article>
-      <div className="self-center prose dark:prose-light">
+      <div className="self-center prose dark:prose-invert">
         <main className="pt-4 pb-12">{children}</main>
       </div>
     </>
