@@ -11,6 +11,7 @@ const Thumbnail: React.FC<Props> = ({ title, src, slug }: Props) => {
   const image = (
     <Image
       src={src}
+      className="overflow-hidden rounded-xl"
       alt={`Cover Image for ${title}`}
       width={1280}
       height={720}
@@ -19,7 +20,7 @@ const Thumbnail: React.FC<Props> = ({ title, src, slug }: Props) => {
   return (
     <>
       {slug ? (
-        <Link href={`/posts/${slug}`}>
+        <Link href={`/${slug}`}>
           <a aria-label={title}>{image}</a>
         </Link>
       ) : (

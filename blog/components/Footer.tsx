@@ -1,11 +1,12 @@
 import { faGithub, faKeybase, faLinkedin, faStackOverflow, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import StandardIconLink from "./StandardIconLink";
+//import StandardLink from "./StandardLink";
 
 const navigation = {
     company: [
       { name: 'About', href: '/about' },
-    //   { name: 'Blog', href: '/blog' },
+      { name: 'Blog', href: '/blog' },
     ],
     legal: [
       { name: 'Privacy', href: '/privacy' },
@@ -63,7 +64,9 @@ const navigation = {
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.company.map((item) => (
                         <li key={item.name}>
-                          <StandardLink href={item.href} title={item.name} />
+                        <StandardLink href={item.href} newTab=''>
+                          {item.name}
+                        </StandardLink>
                         </li>
                     ))}
                   </ul>
@@ -73,7 +76,9 @@ const navigation = {
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.legal.map((item) => (
                       <li key={item.name}>
-                        <StandardLink href={item.href} title={item.name} />
+                        <StandardLink href={item.href} newTab=''>
+                          {item.name}
+                        </StandardLink>
                       </li>
                     ))}
                   </ul>

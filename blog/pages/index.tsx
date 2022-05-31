@@ -1,7 +1,6 @@
 import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
-import Link from 'next/link';
-import Thumbnail from '../components/Thumbnail';
+import PostCard from '../components/PostCard';
 import { IPost } from '../types/post';
 import { getAllPosts } from '../utils/mdxUtils';
 
@@ -17,25 +16,9 @@ const Index: React.FC<Props> = ({ posts }: Props) => {
         description="The Cendenta blog"
       />
       <div>
-        <div className="space-y-12">
+        <div className="container px-6 lg:px-0 w-full max-w-2xl mx-auto mt-8 md:mt-12 mb-16">
           {posts.map((post) => (
-            <div key={post.slug}>
-              <div className="mb-4">
-                <Thumbnail
-                  slug={post.slug}
-                  title={post.title}
-                  src={post.thumbnail}
-                />
-              </div>
-
-              <h2 className="text-2xl font-bold mb-4">
-                <Link href={`/posts/${post.slug}`}>
-                  <a>{post.title}</a>
-                </Link>
-              </h2>
-
-              <p>{post.description}</p>
-            </div>
+            <PostCard key={post.slug} post={post}/>
           ))}
         </div>
       </div>

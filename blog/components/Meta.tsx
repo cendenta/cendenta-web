@@ -26,7 +26,7 @@ const Meta: React.FC<Props> = ({ pageTitle }: Props) => {
 
   return (
     <Head>
-      <title>{`${pageTitle} | ${SITE_NAME}`}</title>
+      <title>{`${pageTitle} &ndash; ${SITE_NAME}`}</title>
       <link
         rel="apple-touch-icon"
         sizes="180x180"

@@ -1,7 +1,10 @@
 name: home
 
 on: 
+  pull_request:
   push:
+    branches:
+      - main
     paths:
       - 'home/**'
       - .github/workflows/home.yml
@@ -19,9 +22,10 @@ jobs:
           working-directory: home
           build: npm run build
           start: npm start
-          record: false
+          record: true
           wait-on: 'http://localhost:3000'
         env: 
+          BLOG_URL: ${{ env.BLOG_URL }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
