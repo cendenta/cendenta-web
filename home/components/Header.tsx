@@ -13,7 +13,7 @@ const navigation = [
 export default function Header() {
 
   return (
-    <header className="bg-light-gray dark:bg-med-blue-gray">
+    <header>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="w-full py-6 flex items-center justify-between border-b border-med-gray-500 lg:border-none">
           <div className="flex items-center">
