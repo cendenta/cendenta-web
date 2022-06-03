@@ -3,7 +3,20 @@ import Link from 'next/link';
 function ButtonLink({href, title}) {
   return (
     <Link href={href ?? ''}>
-        <a className="inline-block bg-med-blue-gray py-2 px-4 border border-transparent rounded-md text-base font-bold text-light-gray dark:text-dark-blue-gray hover:bg-opacity-75 hover:bg-dark-orange dark:bg-gray-200 dark:hover:bg-dark-orange">
+        <a className="
+          bg-med-blue-gray 
+          border 
+          border-transparent 
+          dark:bg-gray-400 
+          dark:hover:bg-dark-orange
+          font-bold 
+          hover:bg-dark-orange 
+          inline-block 
+          px-4 
+          py-2 
+          rounded-md 
+          text-white 
+        ">
           {title ?? ''}
         </a>
     </Link>

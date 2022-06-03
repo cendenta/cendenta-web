@@ -1,9 +1,16 @@
 import Link from 'next/link';
 
-function StandardLink({href, title}) {
+function StandardLink({href, title, underline}) {
     return (
     <Link href={href ?? ''}>
-        <a className="text-base text-med-gray hover:text-dark-orange dark:text-white dark:hover:text-dark-orange">
+        <a className={`          
+          dark:text-white
+          dark:decoration-solid
+          dark:hover:text-dark-orange
+          hover:text-dark-orange 
+          text-base 
+          text-med-gray 
+          ${underline ? 'underline decoration-dotted' : ''}`}>
           {title ?? ''}
         </a>
     </Link>

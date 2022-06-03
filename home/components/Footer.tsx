@@ -1,11 +1,12 @@
 import { faGithub, faKeybase, faLinkedin, faStackOverflow, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import StandardIconLink from "./StandardIconLink";
+import StandardLink from "./StandardLink";
 
 const navigation = {
     company: [
       { name: 'About', href: '/about' },
-    //   { name: 'Blog', href: '/blog' },
+      { name: 'Blog', href: '/blog' },
     ],
     legal: [
       { name: 'Privacy', href: '/privacy' },

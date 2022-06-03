@@ -2,6 +2,9 @@ const { withSentryConfig } = require('@sentry/nextjs');
 const { BLOG_URL } = process.env;
 
 const moduleExports = {
+  images: {
+    domains: ["images.unsplash.com", "source.unsplash.com"]
+  },
   reactStrictMode: true,
   async rewrites() {
     return [

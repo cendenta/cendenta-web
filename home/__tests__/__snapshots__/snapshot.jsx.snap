@@ -2,6 +2,68 @@
 
 exports[`renders homepage unchanged 1`] = `
 <div>
-  <div />
+  <div
+    class="relative"
+  >
+    <div
+      class="absolute inset-x-0 bottom-0 h-1/2"
+    />
+    <div
+      class="max-w-7xl mx-auto sm:px-6 lg:px-8"
+    >
+      <div
+        class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden"
+      >
+        <div
+          class="absolute inset-0"
+        >
+          <span
+            style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
+          >
+            <img
+              alt="Cover Image for Cendenta"
+              class="h-full w-full object-cover"
+              data-nimg="fill"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+            <noscript />
+          </span>
+          <div
+            class="absolute inset-0 dark:bg-med-blue-gray bg-dark-orange mix-blend-multiply"
+          />
+        </div>
+        <div
+          class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8"
+        >
+          <h1
+            class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl"
+          >
+            <span
+              class="block text-white"
+            >
+              Bespoke software, done well.
+            </span>
+          </h1>
+          <p
+            class="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl"
+          >
+            Cendenta helps clients achieve their unique goals.
+          </p>
+          <div
+            class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center"
+          >
+            <a
+              class=" bg-med-blue-gray border border-transparent dark:bg-gray-400 dark:hover:bg-dark-orange font-bold hover:bg-dark-orange inline-block px-4 py-2 rounded-md text-white "
+              href="/contact"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
