@@ -26,7 +26,8 @@ module.exports = {
     typography: (theme) => ({}),
     extend: {
       fontFamily: {
-        sans: ['Red Hat Text', ...defaultTheme.fontFamily.sans],
+        brand: ['Red Hat Text', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
     }
   },

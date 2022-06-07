@@ -1,7 +1,6 @@
 import { faGithub, faKeybase, faLinkedin, faStackOverflow, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import StandardIconLink from "./StandardIconLink";
-//import StandardLink from "./StandardLink";
 
 const navigation = {
     company: [
@@ -48,44 +47,6 @@ const navigation = {
           Footer
         </h2>
         <div className="max-w-7xl mx-auto py-3 px-4 sm:px-6 lg:py-2 lg:px-8">
-          {/* <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div className="space-y-8 xl:col-span-1">
-              <p className="text-gray-500 text-base">
-                Conscientiously-developed bespoke software.
-              </p>
-            </div>
-            <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                
-              </div>
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 className="text-sm font-semibold text-dark-blue-gray tracking-wider uppercase">Company</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {navigation.company.map((item) => (
-                        <li key={item.name}>
-                        <StandardLink href={item.href} newTab=''>
-                          {item.name}
-                        </StandardLink>
-                        </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-dark-blue-gray tracking-wider uppercase">Legal</h3>
-                  <ul role="list" className="mt-4 space-y-4">
-                    {navigation.legal.map((item) => (
-                      <li key={item.name}>
-                        <StandardLink href={item.href} newTab=''>
-                          {item.name}
-                        </StandardLink>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div> */}
           <div className="mt-6 md:flex md:items-center md:justify-between">
             <div className="flex space-x-6 md:order-2">
               {navigation.social.map((item) => (<StandardIconLink key={item.name} item={item} />))}

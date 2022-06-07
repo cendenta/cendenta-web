@@ -43,7 +43,12 @@ exports[`renders homepage unchanged 1`] = `
             <span
               class="block text-white"
             >
-              Bespoke software, done well.
+              Bespoke software
+            </span>
+            <span
+              class="block text-white"
+            >
+              done well.
             </span>
           </h1>
           <p
@@ -52,13 +57,13 @@ exports[`renders homepage unchanged 1`] = `
             Cendenta helps clients achieve their unique goals.
           </p>
           <div
-            class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center"
+            class="mt-10 mx-auto sm:max-w-none flex justify-center"
           >
             <a
-              class=" bg-med-blue-gray border border-transparent dark:bg-gray-400 dark:hover:bg-dark-orange font-bold hover:bg-dark-orange inline-block px-4 py-2 rounded-md text-white "
+              class=" bg-med-blue-gray border border-transparent dark:bg-gray-400 dark:hover:bg-dark-orange font-bold font-brand hover:bg-dark-orange inline-block px-4 py-2 rounded-md text-white "
               href="/contact"
             >
-              Contact Us
+              Contact
             </a>
           </div>
         </div>

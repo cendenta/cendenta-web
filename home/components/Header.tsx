@@ -26,12 +26,12 @@ export default function Header() {
                     layout="fill"
                   />
                 </div>
-                <span className="text-2xl font-semibold text-dark-blue-gray dark:text-white hover:text-dark-orange hover:dark:text-dark-orange">Cendenta</span>
+                <span className="font-brand text-2xl font-semibold text-dark-blue-gray dark:text-white hover:text-dark-orange hover:dark:text-dark-orange">Cendenta</span>
               </a>
             </Link>
             <div className="hidden ml-10 space-x-8 lg:block">
               {navigation.map((link) => (
-                <StandardLink key={link.name} href={link.href} title={link.name} underline={false} />
+                <StandardLink key={link.name} href={link.href} title={link.name} underline={false} className="font-brand" />
               ))}
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function Header() {
         </div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
           {navigation.map((link) => (
-            <StandardLink key={link.name} href={link.href} title={link.name} underline={false} />
+            <StandardLink className="font-brand" key={link.name} href={link.href} title={link.name} underline={false} />
           ))}
         </div>
       </nav>
