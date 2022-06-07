@@ -10,6 +10,7 @@ function ButtonLink({href, title}) {
           dark:bg-gray-400 
           dark:hover:bg-dark-orange
           font-bold 
+          font-brand 
           hover:bg-dark-orange 
           inline-block 
           px-4 

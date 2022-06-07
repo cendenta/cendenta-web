@@ -56,7 +56,7 @@ export default function ContactForm() {
                                         </label>
                                         <input
                                             {...field}
-                                            className="w-full p-4 dark:bg-light-gray dark:text-black font-semibold placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
+                                            className="w-full p-4 dark:bg-light-gray dark:text-black placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
                                             placeholder="Full Name"
                                             type="text"
                                             name="fullName"
@@ -89,7 +89,7 @@ export default function ContactForm() {
                                         </label>
                                         <input
                                             {...field}
-                                            className="w-full p-4 dark:bg-light-gray dark:text-black font-semibold placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
+                                            className="w-full p-4 dark:bg-light-gray dark:text-black placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
                                             placeholder="Email"
                                             type="text"
                                             name="email"
@@ -118,7 +118,7 @@ export default function ContactForm() {
                                         </label>
                                         <input
                                             {...field}
-                                            className="w-full p-4 dark:bg-light-gray dark:text-black font-semibold placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
+                                            className="w-full p-4 dark:bg-light-gray dark:text-black placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
                                             placeholder="Phone"
                                             type="text"
                                             name="phone"
@@ -151,7 +151,7 @@ export default function ContactForm() {
                                         </label>
                                         <textarea
                                             {...field}
-                                            className="w-full p-4 dark:bg-light-gray dark:text-black font-semibold placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
+                                            className="w-full p-4 dark:bg-light-gray dark:text-black placeholder-med-gray border rounded-lg outline-none lg:px-6 focus:ring-dark-orange focus:ring-2 focus:border-none"
                                             placeholder="Message"
                                             type="message"
                                             name="message"
@@ -175,7 +175,7 @@ export default function ContactForm() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting || Object.keys(props.errors).length > 0}
-                                className="disabled:opacity-50 inline-block bg-med-blue-gray py-2 px-4 border border-transparent rounded-md font-bold text-white hover:bg-opacity-75 hover:bg-dark-orange dark:bg-med-gray dark:text-white dark:hover:bg-dark-orange"
+                                className="disabled:opacity-50 inline-block bg-med-blue-gray py-2 px-4 border border-transparent rounded-md font-bold text-white hover:bg-dark-orange dark:bg-med-gray dark:text-white dark:hover:bg-dark-orange"
                             >
                                 {`Submit${isSubmitting ? 'ting' : ''}`}
                             </button>

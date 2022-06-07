@@ -1,6 +1,5 @@
 import { NextSeo } from 'next-seo';
 import ExternalLink from "../components/ExternalLink";
-import StandardLink from "../components/StandardLink";
 
 const competencies = [
   { name: "React", link: "https://reactjs.org/"}, 
@@ -56,8 +55,7 @@ const tools = [
 const TagLink = ({href, title}) => (
   <span key={title} className="
     bg-gray-300
-    duration-200 
-    dark:bg-gray-700
+    dark:bg-gray-600
     dark:hover:bg-dark-orange
     dark:text-white
     dark:hover:text-white
@@ -67,7 +65,6 @@ const TagLink = ({href, title}) => (
     mr-3 
     px-3 
     py-1 
-    transition-colors 
     rounded-md 
     text-base
     text-dark-blue-gray
@@ -83,24 +80,22 @@ const TagLink = ({href, title}) => (
 );
 
 const About = () => (
-  <>
+  <div>
     <NextSeo
       title="About &ndash; Cendenta"
       description="Cendenta is a custom software development company."
     />
-    <div className="max-w-4xl mx-auto px-6 py-6">
-      <header className="mb-8">
-        <h2 className="mb-5 text-xl font-bold">About Cendenta</h2>
-        <div className="prose dark:prose-light">
-          <p className="mb-2">My name is <ExternalLink href="https://www.linkedin.com/in/mharward1/" title="Matthew Harward" />.</p>
-          <p className="mb-2">I have over 15 years of professional software and web development experience across a wide variety of industries and technology stacks. Cendenta was formed in 2018 to encapsulate my freelance and independent-contract work.</p>
-          <p className="mb-2">The name originates with the concept of <ExternalLink href="https://en.wikipedia.org/wiki/Self-Reliance" title="self-reliance" /> from the philosophy of <ExternalLink href="https://en.wikipedia.org/wiki/Transcendentalism" title="transcendentalism" />.</p>
-          <p className="mt-5">Please feel free to <StandardLink href="/contact" title="send me a message" underline={true}/> to discuss whether Cendenta would be a good fit for your project.</p>
+    <div className="max-w-7xl mx-auto px-6 pb-6">
+      <header className="mb-8">        
+        <div className="prose dark:prose-light bg-gray-200 dark:bg-gray-700 p-5 rounded-[24px]">
+          <p className="mb-4">My name is <ExternalLink href="https://www.linkedin.com/in/mharward1/" title="Matthew Harward" />.</p>
+          <p className="mb-4 text-justify">I have over 15 years of professional software and web development experience across a diverse set of industries and technology stacks. After some years focused on SQL Server development and the .NET world, I have more recent experience working in serverless web development with React and MySQL/PostgreSQL backends.</p>
+          <p className="text-justify">The name Cendenta is simply a substring of &quot;<ExternalLink href="https://en.wikipedia.org/wiki/Transcendentalism" title="transcendentalism" />&quot; — among other of its principles, the theme of <ExternalLink href="https://en.wikipedia.org/wiki/Self-Reliance" title="self-reliance" /> seems appropriate to the nature of conscientious freelance and independent contract work.</p>
         </div>  
       </header>
 
       <section className="mb-8">
-        <h2 className="mb-4 text-xl font-bold">Competencies</h2>
+        <h2 className="mb-4 text-xl text-dark-blue-gray dark:text-gray-200">Competencies</h2>
         <div className="flex flex-wrap">
           {
             competencies.map(comp => 
@@ -113,8 +108,8 @@ const About = () => (
           }
         </div>
       </section>
-      <section className="mb-8">
-        <h2 className="mb-4 text-xl font-bold">Tools</h2>
+      <section className="mb-2">
+        <h2 className="mb-3 text-xl text-dark-blue-gray dark:text-gray-200">Tools</h2>
         <div className="flex flex-wrap">
           {
             tools.map(t => 
@@ -128,7 +123,7 @@ const About = () => (
         </div>
       </section>
     </div>
-  </>
+  </div>
 )
 
 export default About

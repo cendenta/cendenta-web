@@ -7,6 +7,7 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet" /> 
         <script defer 
           data-code="zusw7OsbEKyRqzUgaBeUiAsWmNGqngXs"
