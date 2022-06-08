@@ -89,8 +89,8 @@ const About = () => (
       <header className="mb-8">        
         <div className="prose dark:prose-light bg-gray-200 dark:bg-gray-700 p-5 rounded-[24px]">
           <p className="mb-4">My name is <ExternalLink href="https://www.linkedin.com/in/mharward1/" title="Matthew Harward" />.</p>
-          <p className="mb-4 text-justify">I have over 15 years of professional software and web development experience across a diverse set of industries and technology stacks. After some years focused on SQL Server development and the .NET world, I have more recent experience working in serverless web development with React and MySQL/PostgreSQL backends.</p>
-          <p className="text-justify">The name Cendenta is simply a substring of &quot;<ExternalLink href="https://en.wikipedia.org/wiki/Transcendentalism" title="transcendentalism" />&quot; — among other of its principles, the theme of <ExternalLink href="https://en.wikipedia.org/wiki/Self-Reliance" title="self-reliance" /> seems appropriate to the nature of conscientious freelance and independent contract work.</p>
+          <p className="mb-4 text-justify">I have over 15 years of professional software and web development experience across a diverse set of industries and technology stacks. After some years focused on SQL Server development and business intelligence in the .NET world, my most recent experience is in serverless web development with React and MySQL/PostgreSQL backends.</p>
+          <p className="text-justify">The name Cendenta is simply a substring of &quot;<ExternalLink href="https://en.wikipedia.org/wiki/Transcendentalism" title="transcendentalism" />&quot; — among other of its principles, the theme of <ExternalLink href="https://en.wikipedia.org/wiki/Self-Reliance" title="self-reliance" /> seems appropriate to the nature of conscientious freelance/independent contract work.</p>
         </div>  
       </header>
 
