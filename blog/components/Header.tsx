@@ -6,7 +6,7 @@ import ThemeSwitch from './ThemeSwitch';
 
 const navigation = [
   { name: 'About', href: `${process.env.HOME_URL}/about` },
-  { name: 'Blog', href: '/' },
+  // { name: 'Blog', href: '/' },
   { name: 'Contact', href: `${process.env.HOME_URL}/contact` }
 ]
 
